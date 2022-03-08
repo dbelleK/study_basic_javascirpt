@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<img src="" alt="">
+</body>
+</html>
+<!--
+                                        <<객체화>>
+웹브라우저의 구성요소들은 하나하나가 객체화되어있다
+자바스크립트로 이객체를 제어해서 웹브라우저를 제어할 수 있게 된다
+이 객체들은 서로 계층적인 관계로 구조화되어 있다
+BOM과 DOM은 이 구조를 구성하고 있는 가장 큰 틀의 분류이다
+
+var imgs = document.getElementsByTagName('img');
+//img라는 태그의 이름을 가지고 있는 모든 태그를 가지고와서 이 함수를 리턴해준다는 뜻
+//s -> 복수 : 배열을 사용한다
+//imgs[0] : imgs배열의 첫번째 엘리먼트 가져옴
+//imgs[0].style.width='300px' :  imgs배열의 첫번째 엘리먼트의 css 너비 300px로 한다
+//이미 화면에 출력된 이미지는 수정할 수 없으므로 그 객체를 가져와야하는데  'document.getElementsByTagName'로 찾아서 수정해주어야한다.
+
+window.alert('Hello world');  -> 경고창 띄울 수 있다
+-->
+
+<!--
+window : 전역객체, window.frame
+
+(window객체 프로퍼티)
+-> DOM : document - 웹페이지에 있는 태그를 제어(Document Object Model) - 문서를 제어
+window.document = document
+
+-> BOM : 브라우저가 가리키고 있는 url가리키거나 경고창을 띄우거나...  - 브라우저 자체를 제어
+       : navigator, screen, location, frames, history, XMLHttpReqiest
+
+-> JavaScript : 브라우저제어, 구글앱스크립트제어, node.js서버측 자바스크립트 제어 ... - 브라우저라는 호스트 환경에서만 제어
+              : Object, Array, Function, Date
+-->
