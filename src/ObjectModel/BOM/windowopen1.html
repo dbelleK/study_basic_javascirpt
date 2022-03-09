@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <input type="button" onclick="open1()" value="window.open('demo2.html');">
+    <input type="button" onclick="open2()" value="window.open('demo2.html','_self');">
+    <input type="button" onclick="open3()" value="window.open('demo2.html','_blank');">
+    <input type="button" onclick="open4()" value="window.open('demo2.html','ot');">
+    <input type="button" onclick="open5()" value="window.open('demo2.html','_blank', 'width=200, height=200 , resizable=no');">
+</head>
+<body>
+<script>
+    function open1(){
+        window.open('demo2.html'); //새창 열림 = '_blank'
+    }
+     function open2(){
+        window.open('demo2.html','_self'); //해당 창에서 열림
+    }
+    function open3(){
+        window.open('demo2.html','_blank'); //해당 창에서 열림
+    }
+    function open4(){
+        window.open('demo2.html','ot'); //재실행 시 동일한 새 창이 계속 열림
+    }
+    function open5(){
+        window.open('demo2.html','_blank', 'width=200, height=200 , resizable=no'); //브라우저의 보완적인 측면 제한 / 저 사이즈에 맞게 새 창 띄움
+    }
+
+</script>
+
+</body>
+</html>
+
+<!--
+window.open메소드는 새 창을 생성한다-->

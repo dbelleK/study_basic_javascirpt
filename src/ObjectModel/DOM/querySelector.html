@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVAScript</li>
+</ul>
+<ol>
+    <li>HTML</li>
+    <li class="active">CSS</li>
+    <li>JAVAScript</li>
+</ol>
+<!--<script>
+    var li = document.querySelector('li'); //하나의 엘리먼트만 리턴 (제일 먼저 나타나는 것) , querySelectorAll하면 모두 리턴
+    li.style.color='red';
+    var li = document.querySelector('.active');
+    li.style.color='blue';
+</script>-->
+
+<script>
+    var lis = document.querySelectorAll('li'); //모든 li컬러 blue
+    for(var name in lis){
+        lis[name].style.color = 'blue';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li id="active">JAVAScript</li>
+</ul>
+
+<script>
+
+    var li = document.getElementById('active');
+    console.log(li.constructor.name); //HTMLLIElement //객체가 하나만 리턴된다
+
+    var lis = document.getElementsByTagName('li');
+    console.log(lis.constructor.name); //HTMLCollection //복수 리턴 //유사배열-배열처럼사용할 수 있어 여러개의 엘리먼트를 담고 있다
+
+</script>
+</body>
+</html>
