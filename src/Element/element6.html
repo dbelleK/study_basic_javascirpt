@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a id="target" href="http://opentutorials.org">opentutorials</a>
+<script>
+    var t = document.getElementById('target');
+    console.log(t.getAttribute('href')) //http://opentutorials.org
+
+    t.setAttribute('title','opentutorials.org'); //title 속성의 값을 설정
+    console.log(t.hasAttribute('title')); //title이 있는지 없는지 //true
+
+    t.removeAttribute('title');
+    console.log(t.hasAttribute('title')); //false
+</script>
+</body>
+</html>
+<!--속성 API-->
+
+<!--속성은 HTML에서 태그명만으로는 부족한 부가적인 정보라고 할 수 있다. 이 속성을 어떻게 제어하는가 알아보자.
+속성을 제어하는 API는 아래와 같다. 각각의 기능은 이름을 통해서 충분히 유추할 수 있을 것이다.
+
+Element.getAttribute(name)
+Element.setAttribute(name, value)
+Element.hasAttribute(name);
+Element.removeAttribute(name);-->

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="t1">open</div>
+<div id="t2">open</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    $('#t1').prop('className', 'important'); //class="important"
+    $('#t2').prop('class', 'current'); //class="current"
+</script>
+
+</body>
+</html>
+
+<!--
+.attr ->href 출력 , checked해당 값 그대로 출력 = attribute 방식
+.prop -> 전체 url 출력, 체크되었으면 true 그렇지 않으면 false = property 방식 // 클래스 이름 className이나 class로 사용가능-->
