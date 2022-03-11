@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="start">
+<ul>
+    <li><a href="./532">html</a></li>
+    <li><a href="./533">css</a></li>
+    <li><a href="./534">javascript</a>
+        <ul>
+            <li><a href="./535">javascript core</a></li>
+            <li><a href="./536">DOM</a></li>
+            <li><a href="./537">BOM</a></li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    var s= document.getElementById('start');
+    console.log(1, s.firstChild); //#test -> 엘리먼트x, 일반적인 텍스트 정보//<body id="start">'text는 여기해당(공백,줄바꿈)'<ul> //((공백,줄바꿈을 하지 않으면 ul엘리먼트해당( 첫번째 자식인 ul엘리먼트 )))
+
+    var ul = s.firstChild.nextSibling
+    console.log(2,ul); //ul엘리먼트 //html, css, javascript
+    console.log(3,ul.nextSibling); //#test
+    console.log(4,ul.nextSibling.nextSibling); // 스크립트 태그
+    console.log(5,ul.childNodes); // ul 엘리먼트의 자식 //0: text 1: li 2: text 3: li 4: text 5: li 6: text
+    console.log(6,ul.childNodes[1]); //html //두번째 요소
+    console.log(7,ul.parentNode); //가장위 부모부터 끝까지
+</script>
+</body>
+</html>
+
+<!--
+.previousSibling : 이전으로감
+.previousSibling.firstChild : 다시돌아감-->

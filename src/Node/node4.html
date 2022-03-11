@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="target">
+<ul>
+    <li>html</li>
+    <li>css</li>
+</ul>
+<input type="button" onclick="callAppendChild();" value="appendChild()"/>
+<input type="button" onclick="callInsertBefore();" value="callInsertBefore()"/>
+
+<script>
+    function  callAppendChild(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('JavaScript');
+        li.appendChild(text); //li안에 JavaScipt들어감
+        target.appendChild(li); //css뒤 제일 마지막인 곳에 들어감
+    }
+
+    function  callInsertBefore(){
+        var target = document.getElementById('target');
+        var li = document.createElement('li');
+        var text = document.createTextNode('jQuery');
+        li.appendChild(text); //li안에 jQuery들어감
+        target.insertBefore(li, target.firstChild); //jQuery가text 앞에 들어감(HTML과 target사이)
+    }
+</script>
+</body>
+</html>
+
+<!--
+노드 추가
+appendChild(child) : 노드의 마지막 자식으로 주어진 엘리먼트 추가
+insertBefore(newElement, referenceElement) :appendChild와 동작방법은 같으나 두번째 인자로 엘리먼트를 전달 했을 때 이것 앞에 엘리먼트가 추가됨
+
+노드를 추가하기 위해서는 추가할 엘리먼트를 생성해야 하는데 이것은 document 객체의 기능이다
+document.createElement(tagname) : 엘리먼트 노드를 추가한다
+document.createTextNode(data) : 텍스트 노드를 추가한다-->

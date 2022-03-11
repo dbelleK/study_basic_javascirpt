@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li id="target">java</li>
+</ul>
+<input type="button" onclick="callRemoveChild();" value="removeChild()"/>
+
+<script>
+    function callRemoveChild() {
+        var target = document.getElementById('target');
+        target.parentNode.removeChild(target); //java 제거
+
+    }
+</script>
+</body>
+</html>
+
+노드제거

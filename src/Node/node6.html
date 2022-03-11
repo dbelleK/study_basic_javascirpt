@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>html</li>
+    <li>css</li>
+    <li id="target">java</li>
+</ul>
+<input type="button" onclick="callReplaceChild();" value="ReplaceChild()"/>
+
+<script>
+    function callReplaceChild() {
+        var a =document.createElement('a');
+        a.setAttribute('href','http://open')
+        a.appendChild(document.createTextNode('web'));
+
+        var target = document.getElementById('target');
+        target.replaceChild(a,target.firstChild); //java->web
+
+    }
+
+</script>
+</body>
+</html>
+
+노드교체

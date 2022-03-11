@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="target" id="target1"> target1 </div>
+
+
+<div id="source">source</div>
+
+<input type="button" value="clone replaceAll target 1" id="btn1" />
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    //엘리먼트 전체 삭제
+    $('#btn1').click(function () {
+        $('#target1').append($('#source')); // target1뒤에 source 추가
+    })
+
+
+</script>
+</body>
+</html>
+
+<!--
+jquery이용 node 변경
+이동-->

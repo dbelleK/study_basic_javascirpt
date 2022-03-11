@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="target" id="target1"> target1 </div>
+<div class="target" id="target2"> target2 </div>
+
+<div id="source">source</div>
+
+<input type="button" value="clone replaceAll target 1" id="btn1" />
+<input type="button" value="clone replaceWith target 2" id="btn2" />
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    //엘리먼트 전체 삭제
+    $('#btn1').click(function () {
+        $('#source').clone().replaceAll('#target1'); //target1 -> source
+    })
+
+    //태그는 유지되면서 텍스트만 삭제
+    $('#btn2').click(function () {
+        $('#target2').replaceWith($('#source').clone()); ////target2 -> source
+    })
+</script>
+</body>
+</html>
+
+<!--
+jquery이용 node 변경
+복사-->

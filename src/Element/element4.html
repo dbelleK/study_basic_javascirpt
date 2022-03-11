@@ -11,13 +11,14 @@
     <li id="active" class="important current">JavaScript</li>
 </ul>
 <script>
-function loop(){
-    for(var i=0; i<active.classList.length; i++){
-        console.log(i, active.classList[i]);
+    function loop() {
+        for (var i = 0; i < active.classList.length; i++) {
+            console.log(i, active.classList[i]);
+        }
     }
-}
 </script>
-<input type="button" value="DOMToKenList" onclick="console.log(active.classList);"> <!-- ['important', 'current', value: 'important current']-->
+<input type="button" value="DOMToKenList" onclick="console.log(active.classList);">
+<!-- ['important', 'current', value: 'important current']-->
 <input type="button" value="조회" onclick="loop();"><!--'important', 'current'-->
 <input type="button" value="추가" onclick="active.classList.add('marked');"> <!--important', 'current', 'marked'-->
 <input type="button" value="제거" onclick="active.classList.remove('important');">  <!--'current', 'marked'-->

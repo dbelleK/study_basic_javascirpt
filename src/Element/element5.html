@@ -20,7 +20,7 @@
 <script>
     var list = document.getElementsByClassName('marked');
     console.group('document'); //group시작
-    for(var i=0; i<list.length; i++){
+    for (var i = 0; i < list.length; i++) {
         console.log(list[i].textContent); //html,DOM,BOM
     }
     console.groupEnd();////group끝
@@ -28,7 +28,7 @@
     console.group('active');
     var active = document.getElementById('active');
     var list = active.getElementsByClassName('marked');
-    for(var i=0; i<list.length; i++){
+    for (var i = 0; i < list.length; i++) {
         console.log(list[i].textContent); //DOM,BOM
     }
     console.groupEnd();

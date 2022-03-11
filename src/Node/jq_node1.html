@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+//1
+<div class="target"> //4 content1 //6 </div>
+//2
+<div class="target">//5 content2 //7 </div>
+//3
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('.target').before('<div>before</div>'); // target 이전 ,형제 //1 ,2
+    $('.target').after('<div>after</div>'); //target 형제 이후 //2,3
+    $('.target').prepend('<div>prepend</div>'); // target안 자식, conent 전 //4,5
+    $('.target').append('<div>append</div>'); //taget의자식, 다음 //6,7
+</script>
+</body>
+</html>
+
+<!--
+
+jquery이용 node 변경
+
+추가
+before : 태그 앞 엘리먼트 추가
+prepend :content기준 이전
+content
+append :content기준 이후
+after : 태그 뒤 엘리먼트 추가-->
