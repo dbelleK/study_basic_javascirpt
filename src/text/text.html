@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="target1"><span>Hello world1</span></p>
+<p id="target2">
+    <span>Hello world2</span>
+</p>
+
+<script>
+    var t1 = document.getElementById('target1').firstChild;
+    var t2 = document.getElementById('target2').firstChild;
+
+    console.log(t1.firstChild.nodeValue); //Hello world1
+
+    try {
+        console.log(t2.firstChild.nodeValue);
+    }catch(e){
+        console.log(e);
+    }
+    console.log(t2.nextSibling.firstChild.nodeValue); //공백이 해당되므로 nextSibling을 하고 firstChild 하면 span 태그 가리킴 //Hello world2
+</script>
+</body>
+</html>
+
+<!--값
+텍스트 노드의 값을 가져오는 API
+:data, nodeValue
+
+조작
+appendData(), -> 데이터 추가
+deleteData(), -> 해당 숫자 글자 갯수 삭제
+insertData(), -> 해당 숫자 사이에 글자 추가
+replaceData(), -> 끝값 대신 글자 대체
+subStringData() -> 해당 값 만큼 알랏
+
+생성
+document.createTextNode()-->
+

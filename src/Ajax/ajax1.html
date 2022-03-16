@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XMLHttpRequest</title>
+</head>
+<body>
+
+<form>
+<select id="timezone">
+    <option value="Asia/Seoul">Asia/Seoul</option>
+    <option value="America/New_York">America/New_York</option>
+</select>
+<select id="format">
+    <option value="Y-m-d H:i:s">Y-m-d H:i:s</option>
+    <option value="Y-m-d">Y-m-d"</option>
+</select>
+</form>
+
+<input type="button" id="execute" value="execute"/>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+    $('#execute').click(function () {
+        $.ajax({
+            url:'./time2.php',
+            type:'post',
+            data:$('form').serialize(),
+            success:function (data) {
+                $('#time').text(data);
+
+            }
+        })
+
+    })
+</script>
+
+<script>
+
+</script>
+</body>
+</html>
+
+<!--
+data : 서버로 데이터를 전송할 때 이 옵션 사용
+dataType : 서버 측에서 전송한 데이터를 어떤 형식의 데이터로 해석할 것인가를 지정
+            값으로 올 수 있는 것은 xml,json,script,html이다.
+            형식을 지정하지 않으면 jquery가 알아서 판단한다
+success : 성공했을 때 호출 할 콜백을 지정한다
+type : 데이터를 전송하는 방법 지정 (get,post)-->
