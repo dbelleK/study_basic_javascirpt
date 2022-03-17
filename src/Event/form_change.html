@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p> <!--input 태그와 똑같이 입력 , 입력을 다 끝내고 포커스 빠져나왔을 때 똑같이 입력된다-->
+<input  id="target" type="name"/>
+<script>
+    var t = document.getElementById('target');
+    t.addEventListener('change' ,function (event) {
+        document.getElementById('result').innerHTML = event.target.value;
+    });
+</script>
+</body>
+</html>
+
+<!--
+폼
+사용자가 입력한 정보를 서버로 전송할 때 사용
+
+-change : 폼 컨트롤의 값이 변경되었을 때 발생하는 이벤트이다, input(text,radio,checkbox),textarea,select태그에 적용된다
+-->
